@@ -11,7 +11,11 @@ const app = express();
 dbConnection();
 
 // ! Cors
-app.use(cors())
+const corsOptions = {
+  origin: '*',
+}
+
+app.use(cors(corsOptions))
 
 // !Directorio público
 
